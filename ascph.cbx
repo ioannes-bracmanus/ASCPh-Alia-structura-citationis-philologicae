@@ -1,36 +1,50 @@
-\ProvidesFile{ascph.cbx}[2025/11/14 Biblatex citation structure for "ALIA STRVCTVRA CITATIONIS PHILOLOGICAE"]
+\ProvidesFile{ascph.cbx}[2026/03/29 ASCPh = "ALIA STRVCTVRA CITATIONIS PHILOLOGICAE"]
 %
 \RequireCitationStyle{authoryear}
-%
+\InitializeCitationStyle{\global\undef\cbx@lasthash}
 \DeclareDelimFormat{nameyeardelim}{\addcomma\space}
 %
+\DeclareFieldFormat{postnote}{#1}
 \renewbibmacro*{postnote}{%
   \iffieldundef{postnote}
     {}
-    {
-      \addcomma\space
-      \printfield[noformat]{postnote}%
-    }%
-}
-%
-\DeclareFieldFormat{postnote}{#1}
-\DeclareFieldFormat[article,book,incollection,online]{pages}{#1}
-%
-\DeclareCiteCommand{\prosecite}
-  {\usebibmacro{prenote}}
-  % Código principal: Imprime el año y la postnota
-  {\printtext[bibhyperref]{%
-     \printfield{labelyear}%
-     \iffieldundef{postnote}
-       {}
-       {%
-         \addcomma\space
-         \printfield[noformat]{postnote}%
-       }%
-   }}
-  {\multicitedelim}
+    {\setunit{\addcomma\space}%
+     \printfield{postnote}}}
+
+% TEXTCITE.
+\DeclareCiteCommand{\textcite}
   {}
-%
-\DeclareMultiCiteCommand{\prosecite}[\mkbibparens]{\prosecite}{\multicitedelim}
+  {\iffieldequals{fullhash}{\cbx@lasthash}
+    {\addsemicolon\space}
+    {\printnames{labelname}\addspace(}%
+   \printfield{labelyear}%
+   \usebibmacro{postnote}%
+   \savefield{fullhash}{\cbx@lasthash}}
+  {\addsemicolon\space}
+  {\ifundef\cbx@lasthash{}{)}}
+
+% PARENCITE.
+\DeclareCiteCommand{\parencite}[\mkbibparens]
+  {}
+  {\iffieldequals{fullhash}{\cbx@lasthash}
+    {\addsemicolon\space}
+    {\printnames{labelname}\setunit{\printdelim{nameyeardelim}}}%
+   \printfield{labelyear}%
+   \usebibmacro{postnote}%
+   \savefield{fullhash}{\cbx@lasthash}}
+  {\addsemicolon\space}
+  {}
+
+% PROSECITE.
+\DeclareCiteCommand{\prosecite}
+  {}
+  {\iffieldequals{fullhash}{\cbx@lasthash}
+    {\addsemicolon\space}
+    {\printnames{labelname}\setunit{\printdelim{nameyeardelim}}}%
+   \printfield{labelyear}%
+   \usebibmacro{postnote}%
+   \savefield{fullhash}{\cbx@lasthash}}
+  {\addsemicolon\space}
+  {}
 %
 \endinput
