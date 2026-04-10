@@ -3,29 +3,29 @@
 \RequireCitationStyle{authoryear}
 \InitializeCitationStyle{\global\undef\cbx@lasthash}
 \DeclareDelimFormat{nameyeardelim}{\addcomma\space}
-%
 \DeclareFieldFormat{postnote}{#1}
 \renewbibmacro*{postnote}{%
   \iffieldundef{postnote}
     {}
     {\setunit{\addcomma\space}%
      \printfield{postnote}}}
-
+%
 % TEXTCITE.
 \DeclareCiteCommand{\textcite}
-  {}
+  {\global\undef\cbx@lasthash}
   {\iffieldequals{fullhash}{\cbx@lasthash}
     {\addsemicolon\space}
-    {\printnames{labelname}\addspace(}%
+    {\ifundef\cbx@lasthash{}{)}
+     \printnames{labelname}\addspace(}%
    \printfield{labelyear}%
    \usebibmacro{postnote}%
    \savefield{fullhash}{\cbx@lasthash}}
   {\addsemicolon\space}
-  {\ifundef\cbx@lasthash{}{)}}
+  {\ifundef\cbx@lasthash{}{)}\global\undef\cbx@lasthash}
 
 % PARENCITE.
 \DeclareCiteCommand{\parencite}[\mkbibparens]
-  {}
+  {\global\undef\cbx@lasthash}
   {\iffieldequals{fullhash}{\cbx@lasthash}
     {\addsemicolon\space}
     {\printnames{labelname}\setunit{\printdelim{nameyeardelim}}}%
@@ -33,11 +33,11 @@
    \usebibmacro{postnote}%
    \savefield{fullhash}{\cbx@lasthash}}
   {\addsemicolon\space}
-  {}
+  {\global\undef\cbx@lasthash}
 
 % PROSECITE.
 \DeclareCiteCommand{\prosecite}
-  {}
+  {\global\undef\cbx@lasthash}
   {\iffieldequals{fullhash}{\cbx@lasthash}
     {\addsemicolon\space}
     {\printnames{labelname}\setunit{\printdelim{nameyeardelim}}}%
@@ -45,6 +45,6 @@
    \usebibmacro{postnote}%
    \savefield{fullhash}{\cbx@lasthash}}
   {\addsemicolon\space}
-  {}
+  {\global\undef\cbx@lasthash}
 %
 \endinput
