@@ -36,11 +36,11 @@
   {\global\undef\cbx@lasthash}
 
 % PROSECITE.
-\DeclareCiteCommand{\prosecite}
+\DeclareCiteCommand{\prosecite}[\mkbibparens]
   {\global\undef\cbx@lasthash}
   {\iffieldequals{fullhash}{\cbx@lasthash}
     {\addsemicolon\space}
-    {\printnames{labelname}\setunit{\printdelim{nameyeardelim}}}%
+    {}% Ignoramos el autor siempre
    \printfield{labelyear}%
    \usebibmacro{postnote}%
    \savefield{fullhash}{\cbx@lasthash}}
