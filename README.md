@@ -2,4 +2,4 @@ Estructura básica o esquelo de sistema bibliográfico de citado y composición 
 
 (La explicación detallada del sistema y su porqué está en proceso de redacción.)
 
-Licencia: este proyecto está bajo la LaTeX Project Public License v1.3c o posterior. Revisar→ https://www.latex-project.org/lppl.txt.
+Licencia: este proyecto se publica bajo la LaTeX Project Public License v1.3c o posterior. Revisar→ https://www.latex-project.org/lppl.txt.
