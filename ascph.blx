@@ -1,5 +1,0 @@
-\ProvidesFile{ascph.blx}[2025/11/14 Biblatex style package "ALIA STRVCTVRA CITATIONIS PHILOLOGICAE"]
-%
-\RequireCitationStyle{ascph.cbx}
-\RequireBibliographyStyle{ascph.bbx}
-\endinput
