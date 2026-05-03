@@ -1,0 +1,5 @@
+\ProvidesFile{nphc.blx}[2025/11/14 Biblatex style package "ALIA STRVCTVRA CITATIONIS PHILOLOGICAE"]
+%
+\RequireCitationStyle{nphc.cbx}
+\RequireBibliographyStyle{nphc.bbx}
+\endinput
