@@ -2,4 +2,4 @@ Estas son unas normas básicas o "esqueleto" de sistema bibliográfico de citado
 
 (La explicación detallada del sistema y su porqué están en proceso de redacción.)
 
-Licencia: este proyecto se publica bajo la LaTeX Project Public License v1.3c o posterior. Revisar→ https://www.latex-project.org/lppl.txt.
+Licencia: este proyecto (la justificación y los achivos .bbx, .cbx, .dbx y .blx) se publica bajo la LaTeX Project Public License v1.3c o posterior. Revisar→ https://www.latex-project.org/lppl.txt.
