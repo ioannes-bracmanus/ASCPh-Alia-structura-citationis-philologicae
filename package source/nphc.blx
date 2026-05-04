@@ -1,4 +1,4 @@
-\ProvidesFile{nphc.blx}[2025/11/14 Biblatex style package "ALIA STRVCTVRA CITATIONIS PHILOLOGICAE"]
+\ProvidesFile{nphc.blx}[2025/11/14 Biblatex style package "NORMÆ PHILOLOGICÆ CITATIONI"]
 %
 \RequireCitationStyle{nphc.cbx}
 \RequireBibliographyStyle{nphc.bbx}
