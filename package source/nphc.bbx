@@ -229,4 +229,9 @@
   \providecommand*{\UrlFont}{}
   \renewcommand*{\UrlFont}{\rmfamily\normalfont}%
 }
+
+\AtBeginBibliography{%
+  \renewcommand*{\mkbibnamefamily}[1]{\textsc{#1}}%
+}
+%
 \endinput
