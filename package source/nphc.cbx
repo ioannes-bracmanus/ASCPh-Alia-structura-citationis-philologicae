@@ -15,11 +15,11 @@
   {\global\undef\cbx@lasthash}
   {\iffieldequals{fullhash}{\cbx@lasthash}
     {\addsemicolon\space}
-    {\ifundef\cbx@lasthash{}{)}
-     \printnames{labelname}\addspace(}%
+    {\ifundef\cbx@lasthash{}{)}%
+    \printnames{labelname}\addspace(%
    \printfield{labelyear}%
    \usebibmacro{postnote}%
-   \savefield{fullhash}{\cbx@lasthash}}
+   \savefield{fullhash}{\cbx@lasthash}}}
   {\addsemicolon\space}
   {\ifundef\cbx@lasthash{}{)}\global\undef\cbx@lasthash}
 
@@ -28,10 +28,10 @@
   {\global\undef\cbx@lasthash}
   {\iffieldequals{fullhash}{\cbx@lasthash}
     {\addsemicolon\space}
-    {\printnames{labelname}\setunit{\printdelim{nameyeardelim}}}%
+    {\printnames{labelname}\setunit{\printdelim{nameyeardelim}}%
    \printfield{labelyear}%
    \usebibmacro{postnote}%
-   \savefield{fullhash}{\cbx@lasthash}}
+   \savefield{fullhash}{\cbx@lasthash}}}
   {\addsemicolon\space}
   {\global\undef\cbx@lasthash}
 
@@ -40,7 +40,6 @@
   {\global\undef\cbx@lasthash}
   {\iffieldequals{fullhash}{\cbx@lasthash}
     {\addsemicolon\space}
-    {}% Ignoramos el autor siempre
    \printfield{labelyear}%
    \usebibmacro{postnote}%
    \savefield{fullhash}{\cbx@lasthash}}

@@ -13,6 +13,7 @@
 %
 \DeclareNameAlias{default}{family-given}
 \DeclareNameAlias{sortname}{family-given}
+\renewcommand*{\mkbibnamefamily}[1]{\textsc{#1}}
 %
 %Camp formats
 \protected\def\mkbibnamelastdelim{\ifnum\value{listcount}>\c@maxnames\else\text{\addspace\&}\fi\addspace}
@@ -229,9 +230,4 @@
   \providecommand*{\UrlFont}{}
   \renewcommand*{\UrlFont}{\rmfamily\normalfont}%
 }
-
-\AtBeginBibliography{%
-  \renewcommand*{\mkbibnamefamily}[1]{\textsc{#1}}%
-}
-%
 \endinput
