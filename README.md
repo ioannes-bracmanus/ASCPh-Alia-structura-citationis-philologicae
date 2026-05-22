@@ -1,7 +1,7 @@
 Estas son unas normas básicas o «esqueleto» de sistema bibliográfico de citado y composición de bibliografías, compuesto íntegramente para **LaTeX**. 
 El documento con la estructura y justificación se compuso con la fuente [AltStandard](https://github.com/ioannes-bracmanus/AltStandard.git). El código en los archivos `.bbx`, `.blx`, `.cbx` y `.dbx` fue producido con asistencia de IA, a partir de indicaciones específicas del diseño técnico del sistema de citación. Para usar el sistema al componer en LaTeX debe copiarse el contenido en [package source](https://github.com/ioannes-bracmanus/Normae-philologicae-citationi-NPhC/tree/main/package%20source) y ubicarse en la carpeta del trabajo (donde se ubican los archivos `.tex` y `.bib`): en caso de usar un ecosistema **Linux**, puede instalarse en una ruta en «home» que simule la instalación en sistema; si aun no existe la ruta, puede generarla con 
 
-    `mkdir -p ~/texmf/tex/latex/biblatex/nphc`
+    mkdir -p ~/texmf/tex/latex/biblatex/nphc
 
 En caso de usar procesadores de texto como **Microsoft Office**, basta con seguir la estructura a rellenar expuesta en el documento `.pdf`. 
 
