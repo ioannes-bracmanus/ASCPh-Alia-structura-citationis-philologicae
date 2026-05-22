@@ -7,6 +7,6 @@ En caso de usar procesadores de texto como **Microsoft Office**, basta con segui
 
 Se puede modificar la estructura como se considere necesario y hacer un «fork», con la condición de cambiar el nombre del sistema (también se puede cambiar la licencia, siempre y cuando se respete que sea «código abierto»). Si tiene alguna sugerencia, compártala.
 
-**Licencia:** este proyecto (la justificación y los achivos .bbx, .cbx, .dbx y .blx) se publica bajo la **LaTeX Project Public License v1.3c** o posterior. Revisar→ https://www.latex-project.org/lppl.txt.
+**Licencia:** este proyecto (la justificación y los achivos `.bbx`, `.cbx`, `.dbx` y `.blx`) se publica bajo la **LaTeX Project Public License v1.3c** o posterior. Revisar→ https://www.latex-project.org/lppl.txt.
 
 (La explicación detallada del sistema y su porqué están en proceso de redacción.)
