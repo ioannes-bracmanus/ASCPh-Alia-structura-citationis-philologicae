@@ -14,12 +14,12 @@
 \DeclareCiteCommand{\textcite}
   {\global\undef\cbx@lasthash}
   {\iffieldequals{fullhash}{\cbx@lasthash}
-    {\addsemicolon\space}
+    {\printfield{labelyear}\usebibmacro{postnote}}%
     {\ifundef\cbx@lasthash{}{)}%
-    \printnames{labelname}\addspace(%
-   \printfield{labelyear}%
-   \usebibmacro{postnote}%
-   \savefield{fullhash}{\cbx@lasthash}}}
+     \printnames{labelname}\addspace(%
+     \printfield{labelyear}%
+     \usebibmacro{postnote}%
+     \savefield{fullhash}{\cbx@lasthash}}}
   {\addsemicolon\space}
   {\ifundef\cbx@lasthash{}{)}\global\undef\cbx@lasthash}
 
@@ -27,11 +27,11 @@
 \DeclareCiteCommand{\parencite}[\mkbibparens]
   {\global\undef\cbx@lasthash}
   {\iffieldequals{fullhash}{\cbx@lasthash}
-    {\addsemicolon\space}
+    {\printfield{labelyear}\usebibmacro{postnote}}%
     {\printnames{labelname}\setunit{\printdelim{nameyeardelim}}%
-   \printfield{labelyear}%
-   \usebibmacro{postnote}%
-   \savefield{fullhash}{\cbx@lasthash}}}
+     \printfield{labelyear}%
+     \usebibmacro{postnote}%
+     \savefield{fullhash}{\cbx@lasthash}}}
   {\addsemicolon\space}
   {\global\undef\cbx@lasthash}
 
@@ -39,10 +39,10 @@
 \DeclareCiteCommand{\prosecite}[\mkbibparens]
   {\global\undef\cbx@lasthash}
   {\iffieldequals{fullhash}{\cbx@lasthash}
-    {\addsemicolon\space}
-   \printfield{labelyear}%
-   \usebibmacro{postnote}%
-   \savefield{fullhash}{\cbx@lasthash}}
+    {\printfield{labelyear}\usebibmacro{postnote}}% <-- CORREGIDO: Imprime el año si el autor se repite
+    {\printfield{labelyear}%
+     \usebibmacro{postnote}%
+     \savefield{fullhash}{\cbx@lasthash}}}
   {\addsemicolon\space}
   {\global\undef\cbx@lasthash}
 %
